@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta tag -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./Book-icon.png" type="image/x-icon">
+    <!-- tittle -->
+    <title>Book Store || with CRUD operation.</title>
+    <!-- bebus font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- boxicons -->
+    <link rel="stylesheet" href="./boxicons/css/boxicons.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="wrap-with-container">
+        <!-- header-area -->
+        <header class="header-area">
+            <div class="icon-logo-flex">
+                <i class='bx bxs-book-alt'></i>
+                <h4>Book Store</h4>
+            </div>
+            <p>Create, Read, Update, Delete with CRUD</p>
+        </header>
+
+        <!-- form section -->
+        <form action="/addbook" method="POST">
+            <fieldset>
+             <legend>BOOK STORE:</legend>
+            <div class="input-flex">
+                <label class='first-label' for="name">Name:</label><input type="text" name="name" placeholder="Name">
+            </div>
+            <div class="label-flex">
+                <div class="input-flex">
+                    <label for="price">Price:</label><input type="text" name="price" placeholder="Price">
+                </div>
+                <div class="input-flex">
+                    <label style="margin-left: 5px;" for="author">Author:</label><input type="text" name="author" placeholder="Author">
+                </div>
+            </div>
+             <button id="btn" type="submit">Submit</button>
+            </fieldset>
+           </form>
+
+           <!-- table section -->
+           <section class="table-area">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Author</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+
+
+                </tbody>
+              </table>
+           </section>
+
+
+           <!-- Modal -->
+           <div id="updateForm" class="modal">
+
+
+          </div>
+
+    </section>
+
+
+
+    <!-- script -->
+    <script src="./js/index.js"></script>
+</body>
+</html>

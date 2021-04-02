@@ -1,0 +1,274 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e7e8e8;
+    font-family: 'Bebas Neue', cursive !important;
+}
+
+/* =================== for container */
+.wrap-with-container{
+    width: 80%;
+    margin: auto;
+}
+
+/* ============================== header */
+.header-area{
+    margin: 30px 0;
+}
+.icon-logo-flex{
+    display: flex;
+    align-items: center;
+}
+.icon-logo-flex i{
+    font-size: 65px;
+    color: orangered;
+}
+.icon-logo-flex h4{
+    font-size: 40px;
+    border-bottom: 2px solid orangered;
+    letter-spacing: 4px;
+    font-weight: normal;
+}
+.header-area p{
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: normal;
+    letter-spacing: 2.5px;
+    margin-left:8px ;
+}
+/* =============================== Form area */
+
+fieldset {
+    background-color: rgb(197, 194, 194);
+    padding: 20px;
+    letter-spacing: 3px;
+  }
+
+legend {
+    background-color: orangered;
+    color: white;
+    padding: 5px 10px;
+}
+
+.input-flex{
+    display: flex;
+    margin: 10px 0 ;
+    width: 100%;
+}
+.label-flex{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.input-flex label{
+    width: 120px;
+    background-color: #fff;
+    padding: 8px;
+    box-shadow: 0 1px 6px 0 rgba(199, 141, 75, 0.28);
+    margin-right: 5px;
+}
+.input-flex input:focus{
+    border: 1px solid orangered;
+}
+.first-label{
+    width: 108.5px !important;
+}
+#price{
+    margin-right: 5px;
+}
+.input-flex input{
+    width: 100%;
+    outline: none;
+    padding: 5px;
+}
+#btn{
+    outline: none;
+    border: none;
+    background-color: orangered;
+    width: 100%;
+    margin: 5px 0;
+    color: #fff;
+    padding: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+#btn:hover{
+    background-color: rgba(255, 68, 0, 0.76);
+}
+
+
+/* =================================== table area */
+.table-area{
+    width: 100%;
+    box-shadow: 0 0 2.25rem #9da5ab;
+    background-color: #fff;
+}
+
+table {
+    width: 100%;
+	border-collapse: collapse;
+	margin:50px auto;
+}
+
+tr:nth-of-type(even) {
+	background: rgba(255, 68, 0, 0.753);
+    color: #fff;
+	}
+
+th {
+	background: orangered;
+	color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+td, th {
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: left;
+	font-size: 18px;
+    letter-spacing: 3px ;
+}
+.btn{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.edit{
+    background-color: rgb(3, 160, 3);
+    color: #fff;
+}
+.edit:hover{
+    background-color: rgba(6, 112, 6, 0.788);
+}
+.delete{
+    background-color: rgb(243, 20, 20);
+    color: #fff;
+}
+.delete:hover{
+    background-color: rgba(138, 41, 6, 0.76);
+}
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table {
+	  	width: 100%;
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid #ccc; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		content: attr(data-column);
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+
+/* ============================ for modal */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(14, 14, 14, 0.76);
+  }
+  .modal-content{
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+  .close-flex{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .close-flex h3{
+      letter-spacing: 3px ;
+  }
+  .close-flex .close{
+      background: orangered;
+      padding: 10px;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+  }
+  .inputs{
+      display: flex;
+      flex-direction: column;
+  }
+  .inputs input{
+      margin-top: 5px;
+      padding: 8px;
+      width: 100%;
+      outline: none;
+  }
+  .inputs input:focus{
+      border: 1px solid orangered;
+  }
+  .inputs button{
+      width: 100%;
+      background: orangered;
+      padding: 10px;
+      color: #fff;
+      margin-top: 5px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+  }
+
+
+  /* =======================================responsive */
+@media  screen and (max-width:576px) {
+    .label-flex{
+        flex-direction: column;
+    }
+}
+@media  screen and (max-width:320px) {
+    .icon-logo-flex i{
+        font-size: 25px;
+    }
+    .icon-logo-flex h4{
+        font-size: 15px;
+    }
+}
